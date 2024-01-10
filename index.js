@@ -1,7 +1,7 @@
-const app = Vue.createApp({
+Vue.createApp({
     data() {
      return {
         message: "Hejsa"
      }
-    },
-   }).mount('#app');
+    }
+   }).mount("#app")
