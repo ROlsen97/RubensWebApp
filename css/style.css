@@ -6,10 +6,17 @@
     margin: 0;
   }
   .Velkommen {
-    align-self: center;
-    font-size: 8vw;
-    padding: 5vw;
+    font-size: 10vw;
+    padding: 5.5vw;
   }
   .mig{
-    width: 55%;
+    max-width: 40%;
+    padding: 4.2vw;
+  }
+  .container{
+    font-size: 1vw;
+    place-items: center;
+  }
+  .Customcon{
+    padding: 4vw;
   }
