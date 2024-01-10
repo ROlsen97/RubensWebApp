@@ -18,5 +18,8 @@
     place-items: center;
   }
   .Customcon{
-    padding: 1vw;
+    padding: 5vw;
+  }
+  .Customrow{
+    margin: 1.5vw;
   }

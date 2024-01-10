@@ -6,49 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://unpkg.com/vue@3"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <body>
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="container">
-            <h1 class="Velkommen">
-              Velkommen
-            </h1>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="container">
-            <div class="embed-responsive embed-responsive-16by9">
-              <img class="mig" src="billederTilWebApp/mig.png">
+  <body>
+    <div id="app">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="container">
+              <h1 class="Velkommen">
+                Velkommen
+              </h1>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="Customcon">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2">
-              <a href="#demo" data-toggle="collapse">Om mig</a>
-                <div id="demo" class="collapse">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
+          <div class="col-sm-4">
+            <div class="container">
+              <div class="embed-responsive embed-responsive-16by9">
+                <img class="mig" src="billederTilWebApp/mig.png" alt="Billede">
+              </div>
             </div>
-            <div class="col-sm-2">Erhvervserfaring</div>
-            <div class="col-sm-2">Sociale medier</div>
-            <div class="col-sm-2">Github</div>
-            <div class="col-sm-2">Kontakt</div>
+          </div>
+          <div class="Customcon">
+              <div v-for="(x, index) in Items" class="col-sm-2 Customrow">
+                <a href data-toggle="collapse" class aria-expanded="true">{{x.name}}</a>
+                <div>{{x.info}}</div>
+              </div>
           </div>
         </div>
-      </div>
-      <div id="app">
-        {{message}}
       </div>
       <script src="index.js"></script>
-    </body>
+  </body>
 </html>
