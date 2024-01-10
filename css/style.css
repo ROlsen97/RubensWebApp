@@ -10,55 +10,6 @@
     font-size: 8vw;
     padding: 5vw;
   }
-  
-  .center-container {
-    display: flex;
-    justify-content: center; /* Centrer indholdet horisontalt */
-    align-items: center;     /* Centrer indholdet vertikalt */
-    height: 100%;
+  .mig{
+    width: 55%;
   }
-  
-
-  img {
-    width: 20vw;
-    height: auto;     /* Billedet vil bevare sin originale højde-bredde-forhold */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-.item1 { 
-  grid-area: 1/1/2/5; 
-}
-.item2 { 
-  grid-area: 1/5/2/6;
-}
-.item3 { 
-  grid-area: 2/1/2/2; 
-}
-.item4 { 
-  grid-area: 2/2/2/3; 
-}
-.item5 { 
-  grid-area: 2/3/2/4; 
-}
-.item6 { 
-  grid-area: 2/4/2/5; 
-}
-.item7 { 
-  grid-area: 2/5/2/6; 
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px;
-  font-size: 30px;
-}
