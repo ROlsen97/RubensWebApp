@@ -15,7 +15,8 @@
   }
   .container{
     font-size: 1vw;
-    place-items: center;
+    display: flex;
+    align-items: center;
   }
   .Customcon{
     padding: 5.5vw;
