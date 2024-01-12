@@ -7,11 +7,11 @@
   }
   .Velkommen {
     font-size: 10vw;
-    padding: 5.5vw;
+    justify-content: center;
+    padding: 1vw;
   }
   .mig{
-    max-width: 40%;
-    padding: 4.2vw;
+    max-width: 75%;
   }
   .container{
     font-size: 1vw;
@@ -21,8 +21,9 @@
   .Customcon{
     padding: 5.5vw;
   }
-  .Customrow{
-    margin: 1.5vw;
+  .Customvel{
+    padding: 2vw;
+    justify-content: center;
   }
   .content {
     padding: 0 18px;
