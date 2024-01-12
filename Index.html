@@ -32,10 +32,10 @@
             </div>
           </div>
           <div class="Customcon">
-              <div v-for="x in Items" class="col-sm-2 Customrow button button1">
-                <div v-on:click="showInfo(x)">{{x.name}}</div>
+            <div v-for="x in Items" class="col-sm-4 Customrow button button1">
+              <div v-on:click="showInfo(x)">{{x.name}}</div>
                 <div :class="{ 'content': true, 'show': x.showInfo }">{{x.infoToShow}}</div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
