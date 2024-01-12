@@ -25,6 +25,7 @@
   }
   .Customrow{
     margin: 1.5vw;
+    min-width: 4vw;
   }
   .Customvel{
     padding: 2vw;
