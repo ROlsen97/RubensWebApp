@@ -18,18 +18,11 @@
     display: flex;
     justify-content: center;
   }
-  .Customcon{
-    padding: 5.5vw;
-    display: flex;
-    justify-content: center;
-  }
-  .Customrow{
-    margin: 1.5vw;
-    min-width: 4vw;
-  }
-  .Customvel{
+  .CustomPadding{
     padding: 2vw;
-    justify-content: center;
+  }
+  .CustomPadding2{
+    padding: 4.5vw;
   }
   .content {
     padding: 0 18px;
@@ -67,7 +60,10 @@
   }
   .button1 {
     background-color: white; 
-    color: black; 
+    color: black;
+    max-width: 30vw;
+    display: block;
+    justify-content: center;
   }
   .button1:hover {
     background-color: #04AA6D;

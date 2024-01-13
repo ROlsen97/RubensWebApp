@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://unpkg.com/vue@3"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -13,7 +14,7 @@
   <body>
     <div id="app">
         <div class="row">
-          <div class="Customvel">
+          <div class="CustomPadding">
             <div class="col-sm-8">
               <div class="container">
                 <h1 class="Velkommen">
@@ -22,7 +23,7 @@
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="Customvel">
+              <div class="CustomPadding">
                 <div class="embed-responsive embed-responsive-16by9">
                   <div class="container mig">
                     <img class="mig" src="billederTilWebApp/mig.png" alt="Billede">
@@ -31,10 +32,12 @@
               </div>
             </div>
           </div>
-          <div class="Customcon">
-            <div v-for="x in Items" class="col-sm-4 Customrow button button1">
-              <div v-on:click="showInfo(x)">{{x.name}}</div>
-                <div :class="{ 'content': true, 'show': x.showInfo }">{{x.infoToShow}}</div>
+          <div class="w3-container">
+            <div class="w3-cell-row CustomPadding2" align="center">
+              <div v-for="x in Items" class="col-sm-4">
+                <div v-on:click="showInfo(x)" class="button button1">{{x.name}}</div>
+                  <div :class="{ 'content': true, 'show': x.showInfo }">{{x.infoToShow}}</div>
+              </div>
             </div>
           </div>
         </div>
