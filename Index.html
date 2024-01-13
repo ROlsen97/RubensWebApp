@@ -33,10 +33,13 @@
             </div>
           </div>
           <div class="w3-container">
-            <div class="w3-cell-row CustomPadding2" align="center">
+            <div class="w3-cell-row CustomPadding" align="center">
               <div v-for="x in Items" class="col-sm-4">
-                <div v-on:click="showInfo(x)" class="button button1">{{x.name}}</div>
-                  <div :class="{ 'content': true, 'show': x.showInfo }">{{x.infoToShow}}</div>
+                <button v-if="x.link" class="button button1" @click="followlink(x)">
+                  {{ x.name }}
+                </button>
+                <a v-else @click="showInfo(x)" class="button button1">{{ x.name }}</a>
+                <div :class="{ 'content': true, 'show': x.showInfo }">{{ x.infoToShow }}</div>
               </div>
             </div>
           </div>
