@@ -10,8 +10,10 @@
     justify-content: center;
     padding: 1vw;
   }
-  .mig{
-    max-width: 75%;
+  .mig2{
+    max-width: 90%;
+    height: auto;
+    min-width: 200px;
   }
   .container{
     font-size: 1vw;
@@ -22,7 +24,7 @@
     padding: 2vw;
   }
   .CustomPadding2{
-    padding: 4.5vw;
+    padding: 7vw;
   }
   .content {
     padding: 0 18px;
@@ -33,17 +35,6 @@
   }
   .show{
     max-height: 500px;
-  }
-  .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
   }
   .button {
     background-color: #04AA6D; /* Green */
@@ -68,4 +59,13 @@
   .button1:hover {
     background-color: #04AA6D;
     color: black; 
+  }
+  @media screen and (max-width: 767px){
+    .mig2 {
+      min-width: 100px;
+      max-width: 201px;
+    }
+    .CustomPadding2{
+      padding: 3.5vw;
+    }
   }
