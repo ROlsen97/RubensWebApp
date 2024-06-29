@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
    }
 
 });
-
+ 
 Vue.createApp({
     data() {
      return {
