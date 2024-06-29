@@ -8,44 +8,85 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://unpkg.com/vue@3"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
   <body>
+    <ul>
+      <li><a href="#home" id="nav-home">Hjem</a></li>
+      <li><a href="#aboutMe" id="nav-aboutMe">Om mig</a></li>
+      <li style="float:right"><a href="#HamburgerMenu"><span class="material-symbols-outlined">menu</span></a></li>
+    </ul>
     <div id="app">
-      <ul>
-        <li><a class="active" href="Index.html">Hjem</a></li>
-        <li><a href="Ommig.html">Om mig</a></li>
-        <li><a href="#projekter">Login</a></li>
-        <li style="float:right"><a href="#HamburgerMenu"><span class="material-symbols-outlined">menu</span></a></li>
-      </ul>
-        <div class="row">
-          <div class="CustomPadding">
-            <div class="col-sm-8 container CustomPadding2">
-              <h1 class="Velkommen">
-                Velkommen
-              </h1>
+        <section id="home">
+          <div class="row">
+            <div class="CustomPadding">
+              <div class="col-sm-8 container CustomPadding2">
+                <h1 class="Velkommen">
+                  Velkommen
+                </h1>
+              </div>
+              <div class="col-sm-4 container CustomPadding">
+                <div class="container mig2 CustomPadding">
+                  <img class="mig2" src="billederTilWebApp/mig.png" alt="Billede">
+                </div>
+              </div>
             </div>
-            <div class="col-sm-4 container CustomPadding">
-              <div class="container mig2 CustomPadding">
-                <img class="mig2" src="billederTilWebApp/mig.png" alt="Billede">
+            <div class="w3-container">
+              <div class="w3-cell-row CustomPadding" align="center">
+                <div v-for="x in Items" class="col-sm-4">
+                  <button v-if="x.link" class="button button1" @click="followlink(x)">
+                    {{ x.name }}
+                  </button>
+                  <button v-else @click="showInfo(x)" class="button button1">{{ x.name }}</button>
+                    <div :class="{ 'content': true, 'show': x.showInfo }">{{ x.infoToShow }}</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="w3-container">
-            <div class="w3-cell-row CustomPadding" align="center">
-              <div v-for="x in Items" class="col-sm-4">
-                <button v-if="x.link" class="button button1" @click="followlink(x)">
-                  {{ x.name }}
-                </button>
-                <button v-else @click="showInfo(x)" class="button button1">{{ x.name }}</button>
-                <div :class="{ 'content': true, 'show': x.showInfo }">{{ x.infoToShow }}</div>
-              </div>
+        </section>
+        <section id="aboutMe">
+          <div class="row">
+            <div class="col-sm-5" align="center">
+                <img class ="customWidth CustomPadding imgCustom" src="billederTilWebApp\RubenPaaGlatIs.jpg" alt="RubenPaaGroenland">
+            </div>
+            <div class="col-sm-7">
+              <div class="CustomPadding">
+                <h1>Om mig</h1>
+                  <p>
+                    Mit navn er Ruben, og jeg er nyuddannet datamatiker. Jeg har nylig kastet mig ud i at skabe denne hjemmeside, der fungerer som mit online portfolio.
+                  </p>
+                  <p>
+                    Når jeg ikke sidder med næsen i computeren, kan jeg lide at bruge min tid på små projekter, lytte til musik, spille computer, se YouTube og udvide min kulinariske horisont. 
+                    Livet handler om mere end blot kodning, ikke? 
+                  </p>
+                  <p>
+                    På mit 4. semester arbejdede jeg intenst med et projekt om remote access trojans. Jeg ønskede at forstå, hvordan man udvikler dem og hvordan man forsvarer sig imod dem. 
+                    Det endte med et 12 tal, og det styrkede ikke kun mine tekniske færdigheder, men gav mig også et dybere indblik i cybersecurity.
+                  </p>
+                  <p>
+                    På mit 5. semester arbejdede min gruppe og jeg på et projekt for mikkelsen electronics, hvor vi skulle levere et tidsregistreringssystem. Vi konstruerede projektet fra bunden, og fulgte Clean architecture, hvilket var meget spændende at sætte op, udvide og ændre.
+                    Det endte med et 10 tal, og det forbedrede ikke kun min forståelse for arkitekturen, men gjorde mig også opmærksom på vigtigheden af velvære, holdånd og gennemsigtighed.
+                  </p>
+                  <p>
+                    Nu står jeg overfor en spændende tid, hvor jeg ser frem til at komme ud på arbejdsmarkedet.
+                  </p>
+                  <p>
+                    Mit yndlingskodesprog er uden tvivl c#. Dets alsidighed er beundrernde, også har jeg hovedsagligt brugt det igennem udannelsen.
+                    Senest har jeg dedikeret tid til at forbedre mine færdigheder inden for hjemmesidedesign.
+                    Jeg er tilfreds med mine fremskridt, især fordi min hjemmeside er responsiv.
+                  </p>
+                </div>
+                  <div class="container2">
+                    <a href="https://www.linkedin.com/in/ruben-olsen-355351172/" class="fa fa-linkedin"></a>
+                    <a href="https://www.instagram.com/ruberboiiii/" class="fa fa-instagram"></a>
+                  </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
       <script src="index.js"></script>
   </body>
 </html>
