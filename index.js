@@ -65,8 +65,35 @@ Vue.createApp({
                item.showInfo = false;
             }
          },
-         followlink(item){
+      followlink(item){
             window.open(item.link, "_blank")
-         }
-      }
+         },
+      signIn(){
+            signInWithEmailAndPassword(auth, email, password)
+               .then((userCredentials => {
+                  const user = userCredentials.user;
+               }).catch((error) => {
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+               }));
+         },
+      createUser(){
+         createUserWithEmailAndPassword(auth, email, password)
+         .then((userCredentials) => {
+         
+         }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+         });
+         },
+      mounted(){
+         onAuthStateChanged(auth, (user) => {
+            if (user){
+               const uid = user.uid;
+            } else {
+         
+            }
+         });
+      } 
+   }
 }).mount("#app");
