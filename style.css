@@ -76,6 +76,11 @@
     background-color: #04AA6D;
     color: black; 
   }
+  
+  .js-loading{
+    visibility: hidden;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;

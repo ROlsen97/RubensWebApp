@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
       aboutMeSection.style.display = 'none';
 
       section.style.display = 'block';
+      document.body.classList.remove('js-loading');
 
       if (section === homeSection) {
          navHome.classList.add('active');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
          navHome.classList.remove('active');
          navAboutMe.classList.add('active');
        }
+
    }
 
    navHome.addEventListener('click', function(){
