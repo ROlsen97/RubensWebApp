@@ -20,14 +20,14 @@
 
 </head>
   <body class = "js-loading">
-    <ul>
-      <li><a href="#home" id="nav-home">Hjem</a></li>
-      <li><a href="#aboutMe" id="nav-aboutMe">Om mig</a></li>
-      <!--<li style="float:right"><a href="#HamburgerMenu"><span class="material-symbols-outlined">menu</span></a></li>-->
-    </ul>
-
+    <nav id="navbar">
+      <ul>
+        <li><a href="#home" id="nav-home">Hjem</a></li>
+        <li><a href="#aboutMe" id="nav-aboutMe">Om mig</a></li>
+        <!--<li style="float:right"><a href="#HamburgerMenu"><span class="material-symbols-outlined">menu</span></a></li>-->
+      </ul>
+    </nav>
     <div id="app">
-      
         <section id="home">
           <div class="row">
             <div class="CustomPadding">
@@ -42,28 +42,28 @@
                 </div>
               </div>
             </div>
-            <div class="w3-container">
-              <div class="w3-cell-row CustomPadding" align="center">
-                <div v-for="x in Items" class="col-sm-4">
-                  <button v-if="x.link" class="button button1" @click="followlink(x)">
+              <div class="w3-container">
+                <div class="w3-cell-row CustomPadding" align="center">
+                  <div v-for="x in Items" class="col-sm-6">
+                    <button v-if="x.link" class="button button1" @click="followlink(x)">
                     {{ x.name }}
-                  </button>
-                  <button v-else @click="showInfo(x)" class="button button1">{{ x.name }}</button>
+                    </button>
+                    <button v-else @click="showInfo(x)" class="button button1">{{ x.name }}</button>
                     <div :class="{ 'content': true, 'show': x.showInfo }">{{ x.infoToShow }}</div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
         </section>
 
         <section id="aboutMe">
-          <div class="row">
+          <div class="row CustomPadding">
             <div class="col-sm-5" align="center">
                 <img class ="customWidth CustomPadding imgCustom" src="billederTilWebApp\RubenPaaGlatIs.jpg" alt="RubenPaaGroenland">
             </div>
-            <div class="col-sm-7">
-              <div class="CustomPadding">
+
+            <div class="col-sm-7 buttomPadding">
+              <div>
                 <h1>Om mig</h1>
                   <p>
                     Mit navn er Ruben, og jeg er nyuddannet datamatiker. Jeg har nylig kastet mig ud i at skabe denne hjemmeside, der fungerer som mit online portfolio.
@@ -84,14 +84,19 @@
                     Mit yndlingskodesprog er uden tvivl c#. Dets alsidighed er beundrende, også har jeg hovedsageligt brugt det igennem uddannelsen. Senest har jeg dedikeret tid til at forbedre mine færdigheder inden for hjemmesidedesign. Jeg er tilfreds med mine fremskridt, især fordi min hjemmeside er responsiv.
                   </p>
                 </div>
-                  <div class="container2">
-                    <a href="https://www.linkedin.com/in/ruben-olsen-355351172/" class="fa fa-linkedin"></a>
-                    <a href="https://www.instagram.com/ruberboiiii/" class="fa fa-instagram"></a>
-                  </div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
+          <div class="row">
+              <div class="container2 social-icons">
+                <a href="https://www.linkedin.com/in/ruben-olsen-355351172/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/ruberboiiii/" class="fa fa-instagram"></a>
+                <a href="https://github.com/ROlsen97" class="fa fa-github "></a>
+              </div>
+          </div>
+
+      </div>
       <script src="index.js"></script>
   </body>
 </html>
