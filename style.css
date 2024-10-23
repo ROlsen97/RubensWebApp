@@ -201,6 +201,10 @@
     .bottomPadding{
       padding-bottom: 100px;
     }
+    
+    section{
+      padding-bottom: 120px;
+    }
 
     .customWidth{
       max-width: 51%;

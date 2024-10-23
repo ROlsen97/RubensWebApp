@@ -29,8 +29,8 @@
     </nav>
     <div id="app">
         <section id="home">
-          <div class="row">
-            <div class="CustomPadding bottomPadding">
+          <div class="row bottomPadding">
+            <div class="CustomPadding">
               <div class="col-sm-8 container CustomPadding2">
                 <h1 class="Velkommen">
                   Velkommen
@@ -42,7 +42,7 @@
                 </div>
               </div>
             </div>
-              <div class="w3-container">
+              <div class="w3-container bottomPadding">
                 <div class="w3-cell-row CustomPadding" align="center">
                   <div v-for="x in Items" class="col-sm-6">
                     <button v-if="x.link" class="button button1" @click="followlink(x)">
