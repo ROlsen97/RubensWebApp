@@ -44,9 +44,12 @@
     display: flex;
     justify-content: space-evenly;
   }
+  .backgroundContent{
+    background-color: transparent;
+  }
   .CustomPadding{
     padding: 2vw;
-  }
+  } 
   .CustomPadding2{
     padding: 7vw;
   }
@@ -65,7 +68,6 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 2s ease-out;
-    background-color: #ffffff;
   }
   .show{
     max-height: 500px;
@@ -73,7 +75,7 @@
   .button {
     background-color: #04AA6D; /* Green */
     border: none;
-    color: white;
+    color: transparent;
     padding: 8px 32px;
     text-align: center;
     text-decoration: none;
@@ -201,7 +203,7 @@
     .bottomPadding{
       padding-bottom: 100px;
     }
-    
+
     section{
       padding-bottom: 120px;
     }
